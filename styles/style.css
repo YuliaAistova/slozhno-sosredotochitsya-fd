@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
@@ -85,6 +85,7 @@
   font-size: var(--main-font-size);
   line-height: 100%;
   padding-block-end: 4px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -133,9 +134,9 @@
 
 .content__title {
   font-weight: var(--text-bold);
-  color: var(--accent-color);
+  color: var(--content-title-color);
   font-size: var(--main-font-size);
-  line-height: 130%;
+  line-height: var(--main-line-height);
 }
 
 .content__articles {
@@ -164,6 +165,10 @@
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   color: var(--content-text-color);
+}
+
+.article__text:not(:last-of-type) {
+  margin-bottom: 10px;
 }
 
 .text__link {
